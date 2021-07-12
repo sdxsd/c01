@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_ultimate_div_mod.c                              :+:    :+:            */
+/*   ft_strlen.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: wmaguire <wmaguire@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/07/12 19:06:51 by wmaguire      #+#    #+#                 */
-/*   Updated: 2021/07/12 19:07:05 by wmaguire      ########   odam.nl         */
+/*   Created: 2021/07/12 19:08:04 by wmaguire      #+#    #+#                 */
+/*   Updated: 2021/07/12 19:19:45 by wmaguire      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_ultimate_div_mod(int *a, int *b);
+int	ft_strlen(char *str);
 
-void	ft_ultimate_div_mod(int *a, int *b)
+int	ft_strlen(char *str)
 {
-	int	res_1;
-	int	res_2;
+	int	iterator;
 
-	res_1 = (*a / *b);
-	res_2 = (*a % *b);
-	*a = res_1;
-	*b = res_2;
+	iterator = 0;
+	while (str[iterator] != '\0')
+		++iterator;
+	return (iterator);
 }
